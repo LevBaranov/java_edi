@@ -14,4 +14,17 @@ public class Rohhirim extends Human{
     public Rohhirim(int age, String name) {
         super("Рохан", age, 170, name);
     }
+    
+    public class Hourse{
+        private String color;
+        private String breed;
+        public Hourse(String c, String b){
+            this.color = c;
+            this.breed = b;
+        }
+        Rohhirim getOwner(){
+            return Rohhirim.this;
+        }
+
+    }
 }

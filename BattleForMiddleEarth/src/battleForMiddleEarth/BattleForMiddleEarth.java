@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package battleForMiddleEarth;
+import java.util.ArrayList;
 import java.util.Random;
 import middleearth.*;
 import static middleearth.MiddleEarthCitizen.*;    
@@ -30,11 +31,22 @@ public class BattleForMiddleEarth {
             }else{
                 combinedArmy[i] = new Troll("TrollTown", age, 200, "Petr");
             }
-            System.out.println(combinedArmy[i].toString());
+            //System.out.println(combinedArmy[i].toString());
         }
         /* 
-        * конец Задание 11
+        * конец Задание 11.
+        * Второй вариант решения
         */
+        ArrayList combinedArmy2 = new ArrayList(100);
+        for(int i = 1; i < combinedArmy2.size(); i++){
+            if (r.nextBoolean()){
+                combinedArmy2.add(new Rohhirim(age, "Ivan"));
+            }else{
+                combinedArmy2.add(new Troll("TrollTown", age, 200, "Petr"));
+            }
+            
+            //System.out.println(combinedArmy2[i].toString());
+        }
     }
     
 }
