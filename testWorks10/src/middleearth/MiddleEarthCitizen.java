@@ -40,4 +40,9 @@ public class MiddleEarthCitizen {
     static String getCountryOrigin(){
         return origin;
     }
+    @Override
+    public String toString() {
+        String str = this.name + " " + this.heightCm;
+        return str;
+    }
 }

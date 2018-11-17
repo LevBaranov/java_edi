@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testworks10;
-import middleearth.*;
+package middleearth;
 /**
  *
  * @author levbaranov
@@ -31,5 +30,10 @@ public class Human extends MiddleEarthCitizen {
     }
     public int getAge(){
         return this.age;
+    }
+    @Override
+    public String toString() {
+        String str = super.toString() + " " + this.homeTown + " " + this.age;
+        return str;
     }
 }
