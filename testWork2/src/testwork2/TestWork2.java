@@ -6,8 +6,8 @@
 package testwork2;
 
 /**
- *
- * @author levlb
+ * Второе задание
+ * @author levbaranov
  */
 public class TestWork2 {
 
