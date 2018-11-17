@@ -3,21 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testworks10;
+package battleForMiddleEarth;
+import java.util.Random;
 import middleearth.*;
-//import static middleearth.MiddleEarthCitizen.*;    
+import static middleearth.MiddleEarthCitizen.*;    
 
 /**
  *
- * @author levlb
+ * @author levbaranov
  */
-public class TestWorks10 {
+public class BattleForMiddleEarth {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        /*Задание 11
+        
+        */
+        Object[] combinedArmy = new Object[100];
+        Random r = new Random();
+        int age = 20;
+        for(int i = 1; i < combinedArmy.length; i++){//String warrior : combinedArmy){
+            if (r.nextBoolean()){
+                combinedArmy[i] = new Rohhirim(age, "Ivan");
+            }else{
+                combinedArmy[i] = new Troll("TrollTown", age, 200, "Petr");
+            }
+            System.out.println(combinedArmy[i].toString());
+        }
+        /* 
+        * конец Задание 11
+        */
     }
     
 }
