@@ -11,13 +11,16 @@ package middleearth;
  */
 public class MiddleEarthCitizen {
     private String name;
+    protected String flank;
     private int heightCm;
+    private int power;
     static String origin = "Средиземье";
     MiddleEarthCitizen(){
         
     }
-    protected MiddleEarthCitizen(String n, int h){
+    protected MiddleEarthCitizen(String n, int h, int p){
         this.name = n;
+        this.power = p;
         this.heightCm = h;
     }
     public String setName(String n){
@@ -37,12 +40,24 @@ public class MiddleEarthCitizen {
     public double heightToMeters(){
         return (double)this.heightCm/100;
     }
-    static String getCountryOrigin(){
+    public static String getCountryOrigin(){
         return origin;
     }
+    public int setPower(int p){
+        this.power = p;
+        return this.power;
+    }
+    public int getPower(){
+        return this.power;
+    }
+    public String getFlank(){
+        return flank;
+    }
+    
     @Override
     public String toString() {
-        String str = this.name + " " + this.heightCm;
+        String str = this.name + " " + this.heightCm + " " + this.power;
         return str;
     }
+    
 }

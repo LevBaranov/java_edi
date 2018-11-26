@@ -12,8 +12,8 @@ public class Human extends MiddleEarthCitizen {
     private String homeTown;
     private int age;
     
-    public Human(String homeTown, int age, int height, String name) {
-        super(name, height);
+    public Human(String homeTown, String name, int age, int height, int power) {
+        super(name, height, power);
         this.homeTown = homeTown;
         this.age = Integer.valueOf(age);
     }
@@ -31,6 +31,15 @@ public class Human extends MiddleEarthCitizen {
     public int getAge(){
         return this.age;
     }
+    
+    public Human() {
+    }
+    @Override
+    public String getFlank(){
+        flank = "Светлая сторона";
+        return flank;
+    }
+    
     @Override
     public String toString() {
         String str = super.toString() + " " + this.homeTown + " " + this.age;

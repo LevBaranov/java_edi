@@ -10,21 +10,21 @@ package middleearth;
  * @author levbaranov
  */
 public class Rohhirim extends Human{
-    
-    public Rohhirim(int age, String name) {
-        super("Рохан", age, 170, name);
+    Horse horse;
+    int powerSum;
+    private static String homeTown = "Рохан";
+    public Rohhirim(String name, int age, int height, int power) {
+        super(homeTown, name, age, height, power);
     }
     
-    public class Hourse{
-        private String color;
-        private String breed;
-        public Hourse(String c, String b){
-            this.color = c;
-            this.breed = b;
-        }
-        Rohhirim getOwner(){
-            return Rohhirim.this;
-        }
+    public Horse getHorse() {
+        return this.horse;
+    }
 
+    public void setHorse(String c, String b, int p) {
+        this.horse = new Horse(c, b, p);
+    }
+    
+    public Rohhirim() {
     }
 }

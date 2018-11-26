@@ -13,10 +13,10 @@ public class Troll  extends MiddleEarthCitizen {
     private String homeTown;
     private int age;
     
-    public Troll(String homeTown, int age, int height, String name) {
-        super(name, height);
+    public Troll(String homeTown, String name, int age, int height, int power) {
+        super(name, height, power);
         this.homeTown = homeTown;
-        this.age = Integer.valueOf(age);
+        this.age = age;
     }
     public String setHomeTown(String t){
         this.homeTown = t;
@@ -31,5 +31,17 @@ public class Troll  extends MiddleEarthCitizen {
     }
     public int getAge(){
         return this.age;
+    }
+    public Troll() {
+    }
+    @Override
+    public String getFlank(){
+        flank = "Тёмная сторона";
+        return flank;
+    }
+    @Override
+    public String toString() {
+        String str = super.toString() + " " + this.homeTown + " " + this.age;
+        return str;
     }
 }
